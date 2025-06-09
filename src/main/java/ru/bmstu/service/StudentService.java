@@ -3,10 +3,15 @@ package ru.bmstu.service;
 import ru.bmstu.model.Student;
 import ru.bmstu.model.UserRole;
 import java.util.List;
+import java.util.Optional;
 
 public interface StudentService {
     List<Student> getAllStudents();
-    void addStudent(String firstName, String lastName, int tokens, UserRole currentRole);
-    void updateTokens(String firstName, String lastName, int change, UserRole currentRole);
-    void expelStudent(String firstName, String lastName, UserRole currentRole);
+    Optional<Student> getById(long id);
+    void addStudent(String firstName, String lastName, int tokens);
+    void addStudent(Student student);
+    void updateTokens(long id, int change);
+    void updateTokens(Student student, int change);
+    void expelStudent(Student student);
+    void expelStudent(long id);
 }

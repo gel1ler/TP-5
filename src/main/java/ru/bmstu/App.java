@@ -3,10 +3,16 @@ package ru.bmstu;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.bmstu.aspect.RoleCheckAspect;
 import ru.bmstu.config.AppConfig;
+import ru.bmstu.model.Student;
 import ru.bmstu.model.UserRole;
 import ru.bmstu.service.StudentService;
+import ru.bmstu.service.RoleSelector;
 
-import java.util.Scanner;
+import java.util.List;
+
+import static ru.bmstu.utils.InputHandler.getIntInput;
+import static ru.bmstu.utils.InputHandler.getStringInput;
+import static ru.bmstu.utils.Menu.*;
 
 public class App {
     public static void main(String[] args) {
@@ -16,87 +22,77 @@ public class App {
         StudentService studentService = context.getBean(StudentService.class);
         RoleCheckAspect roleCheckAspect = context.getBean(RoleCheckAspect.class);
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Welcome to Student Tokens Management System");
-        System.out.print("Enter your first name: ");
-        String firstName = scanner.nextLine();
-        System.out.print("Enter your last name: ");
-        String lastName = scanner.nextLine();
-        System.out.print("Enter your role (student/teacher): ");
-        UserRole role = UserRole.valueOf(scanner.nextLine().toUpperCase());
+        UserRole role = RoleSelector.selectRole();
 
         roleCheckAspect.setCurrentUserRole(role);
 
-        boolean running = true;
-        while (running) {
-            System.out.println("\nOptions:");
-            System.out.println("1. List all students");
-            System.out.println("2. Add new student");
-            System.out.println("3. Update tokens");
-            System.out.println("4. Expel student");
-            System.out.println("5. Exit");
-            System.out.print("Choose an option: ");
+        boolean isRunning = true;
+        while (isRunning) {
+            List<Student> students = studentService.getAllStudents();
 
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            println("\nOptions:");
+            println("1. List all students");
+            println("2. Add new student");
+            println("3. Update tokens");
+            println("4. Expel student");
+            println("5. Exit");
+            print("Choose an option: ");
+
+            int choice = getIntInput();
+            getStringInput();
 
             try {
                 switch (choice) {
                     case 1:
-                        studentService.getAllStudents().forEach(s ->
-                                System.out.printf("%s %s: %d tokens%n",
-                                        s.getFirstName(), s.getLastName(), s.getTokens()));
+                        listStudents(students);
                         break;
                     case 2:
                         if (role == UserRole.TEACHER) {
-                            System.out.print("Enter student first name: ");
-                            String newFirstName = scanner.nextLine();
-                            System.out.print("Enter student last name: ");
-                            String newLastName = scanner.nextLine();
-                            System.out.print("Enter initial tokens: ");
-                            int tokens = scanner.nextInt();
-                            studentService.addStudent(newFirstName, newLastName, tokens, role);
+                            print("Enter student first name: ");
+                            String newFirstName = getStringInput();
+                            print("Enter student last name: ");
+                            String newLastName = getStringInput();
+                            print("Enter initial tokens: ");
+                            int tokens = getIntInput();
+                            studentService.addStudent(newFirstName, newLastName, tokens);
                         } else {
-                            System.out.println("Permission denied. Only teachers can add students.");
+                            println("Permission denied. Only teachers can add students.");
                         }
                         break;
                     case 3:
                         if (role == UserRole.TEACHER) {
-                            System.out.print("Enter student first name: ");
-                            String updateFirstName = scanner.nextLine();
-                            System.out.print("Enter student last name: ");
-                            String updateLastName = scanner.nextLine();
-                            System.out.print("Enter token change (+/-): ");
-                            int change = scanner.nextInt();
-                            studentService.updateTokens(updateFirstName, updateLastName, change, role);
+                            listStudents(students, true);
+                            print("Choose student to update: ");
+                            int i = getIntInput() - 1;
+                            print("Enter token increment: ");
+                            int change = getIntInput();
+                            studentService.updateTokens(students.get(i).getId(), change);
                         } else {
-                            System.out.println("Permission denied. Only teachers can update tokens.");
+                            println("Permission denied. Only teachers can update tokens.");
                         }
                         break;
                     case 4:
                         if (role == UserRole.TEACHER) {
-                            System.out.print("Enter student first name to expel: ");
-                            String expelFirstName = scanner.nextLine();
-                            System.out.print("Enter student last name to expel: ");
-                            String expelLastName = scanner.nextLine();
-                            studentService.expelStudent(expelFirstName, expelLastName, role);
+                            listStudents(students, true);
+                            print("Choose student to expel: ");
+                            int i = getIntInput() - 1;
+                            studentService.expelStudent(students.get(i));
                         } else {
-                            System.out.println("Permission denied. Only teachers can expel students.");
+                            println("Permission denied. Only teachers can expel students.");
                         }
                         break;
                     case 5:
-                        running = false;
+                        isRunning = false;
                         break;
                     default:
-                        System.out.println("Invalid option");
+                        println("Invalid option");
                 }
             } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
+                println("Error: " + e.getMessage());
             }
         }
 
         context.close();
-        System.out.println("Goodbye!");
+        println("Goodbye!");
     }
 }

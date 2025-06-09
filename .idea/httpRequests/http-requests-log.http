@@ -1,0 +1,536 @@
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T084500.404.html
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082717.200.txt
+
+###
+
+DELETE http://127.0.0.1:8080/api/v1/students/8
+X-User-Role: TEACHER
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082710.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/9
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082705.200.txt
+
+###
+
+DELETE http://127.0.0.1:8080/api/v1/students/9
+X-User-Role: TEACHER
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+DELETE http://127.0.0.1:8080/api/v1/students/9
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082636.400.html
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082632.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082622.200.txt
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=-20
+X-User-Role: TEACHER
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082544.200.txt
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=-20
+X-User-Role: TEACHER
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082535.200.txt
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=50
+X-User-Role: TEACHER
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082530.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082447.200.txt
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=50
+X-User-Role: TEACHER
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T082351.200.txt
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John8",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T082347.200.json
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=5
+X-User-Role: ADMIN
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T081536.400.html
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T081438.200.txt
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=5
+X-User-Role: ADMIN
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T081406.400.html
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=5
+X-User-Role: ADMIN
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T081356.400.html
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=5
+X-User-Role: ADMIN
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T081209.500.html
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens%20change==5
+X-User-Role: ADMIN
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T081047.404.html
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=5
+Content-Type: application/x-www-form-urlencoded
+X-User-Role: ADMIN
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T080953.500.html
+
+###
+
+PATCH http://127.0.0.1:8080/api/v1/students/8/tokens?change=5
+Content-Type: application/x-www-form-urlencoded
+X-User-Role: ADMIN
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T080856.500.html
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T080849.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/8
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T015239.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T015219.200.txt
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John8",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T015214.200.json
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John6",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T015208.200.json
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T015159.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/3
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T015152.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/1
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T015146.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T015144.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/1
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014939.500.html
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014931.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/1
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014910.500.html
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John4",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T014222.200.json
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014205.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014203.404.html
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014026.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014008.200.txt
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T014002.200.txt
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John4",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T013959.200.json
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John4",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T013956.200.json
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John4",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T013954.200.json
+
+###
+
+POST http://localhost:8080/api/v1/students/add
+Content-Type: application/json
+X-User-Role: TEACHER
+Content-Length: 64
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "firstName": "John4",
+  "lastName": "Doe2",
+  "tokens": 20
+}
+
+<> 2025-05-31T013952.200.json
+
+###
+
+GET http://localhost:8080/api/v1/students/
+Proxy-Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-05-31T013949.200.txt
+
+###
+
